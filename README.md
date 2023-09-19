@@ -34,7 +34,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 ### Setting up resources in Azure 
-1. On your computer, head over to portal.azure.com and sign in 
+1. On your computer, head over to [portal.azure.com](https://azure.microsoft.com/en-us/get-started/azure-portal) and sign in 
 2. Create a resource group
 
 ![Screenshot (55)](https://github.com/adrianbautista0/osticket-prereqs/assets/142345957/b1f0f2d9-dfd7-4e0f-b85c-9177c1c5f1f4)
@@ -51,7 +51,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 2. Go to start, type in “Remote Desktop Connection” 
 - If on Mac, download Microsoft Remote Desktop app from the app store 
 3. Paste the IP Address you copied then login with the credentials you made
-4. Once on the virtual machine, go to Microsoft Edge, paste the link for this page into the browser and click download all on the right hand corner <br>
+4. Once on the virtual machine, go to Microsoft Edge, paste the [link](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6) for this page into the browser and click download all on the right hand corner <br>
 ### Installing IIS in Windows with CGI and Common HTTP Features 
 1. Go to start menu of Windows > look up Control Panel > click programs > Turn Windows Features on or off 
 2. Click Internet Information Services > Worldwide Web Services > Application Development Features > Turn on CGI
@@ -181,5 +181,5 @@ Double click on it, a pop up will appear, accept the license agreement and insta
 5. Click ok > apply > ok > ok 
 
 Logging into osTicket 
-1. Go to your web browser and paste this link 
+1. Go to your web browser and paste this [link](http://localhost/osTicket/scp/login.php) 
 2. Then log into your credentials and you will be logged into osTicket! 
