@@ -31,10 +31,10 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 ### Setting up resources in Azure 
-On your computer, head over to portal.azure.com and sign in 
-Create a resource group 
+1. On your computer, head over to portal.azure.com and sign in 
+2. Create a resource group 
 
-Create a virtual machine 
+3. Create a virtual machine 
 - Place the virtual machine in the same resource group 
 - Place the virtual machine in the same region as the resource group
 - Use Windows 10 Pro Version 22h2
@@ -42,19 +42,19 @@ Create a virtual machine
 - Write down the login credentials
 
 ### Downloading the installation files  
-Go to the Azure Portal, find the public IP address of the virtual machine you just created and copy it 
-Go to start, type in “Remote Desktop Connection” 
-If on Mac, download Microsoft Remote Desktop app from the app store 
-Paste the IP Address you copied then login with the credentials you made
-Once on the virtual machine, go to Microsoft Edge, paste the link for this page into the browser and click download all on the right hand corner 
-Installing IIS in Windows with CGI and Common HTTP Features 
-Go to start menu of Windows > look up Control Panel > click programs > Turn Windows Features on or off 
-Click Internet Information Services > Worldwide Web Services > Application Development Features > Turn on CGI
+1. Go to the Azure Portal, find the public IP address of the virtual machine you just created and copy it 
+2. Go to start, type in “Remote Desktop Connection” 
+- If on Mac, download Microsoft Remote Desktop app from the app store 
+3. Paste the IP Address you copied then login with the credentials you made
+4. Once on the virtual machine, go to Microsoft Edge, paste the link for this page into the browser and click download all on the right hand corner <br>
+### Installing IIS in Windows with CGI and Common HTTP Features 
+1. Go to start menu of Windows > look up Control Panel > click programs > Turn Windows Features on or off 
+2. Click Internet Information Services > Worldwide Web Services > Application Development Features > Turn on CGI
 
-Collapse Application Development features > go to Common HTTP features > check all boxes 
+3. Collapse Application Development features > go to Common HTTP features > check all boxes 
 
-To test if Internet Information Services was properly installed, go to the browser of the virtual machine and in the url, type “127.0.0.1” 
-A page for Internet Information Services should pop up if all the previous steps were done correctly
+- To test if Internet Information Services was properly installed, go to the browser of the virtual machine and in the url, type “127.0.0.1” 
+- A page for Internet Information Services should pop up if all the previous steps were done correctly
 
 
 
@@ -67,93 +67,90 @@ In the downloads folder of file explorer, search for “rewrite_amd64_en-US.msi�
 Double click on it, a pop up will appear, accept the license agreement and install it
 
 ### Creating the directory C:\PHP and installing PHP
-In file explorer > find This PC > Windows (C:) > right click > New > folder > Name “PHP” 
-In file explorer > go to downloads > find “php-7.3.8-nts-Win32-VC15-x86.zip”
-Right click on it > extract all > click browse > This PC > Windows (C:) > Select PHP > Extract
+1. In file explorer > find This PC > Windows (C:) > right click > New > folder > Name “PHP” 
+2. In file explorer > go to downloads > find “php-7.3.8-nts-Win32-VC15-x86.zip”
+3. Right click on it > extract all > click browse > This PC > Windows (C:) > Select PHP > Extract
 
 ### Installing C++ Redistributable
-File explorer > downloads > search for “VC_redist.x86.exe”
-Double click the file > click next > click “I agree to license terms and conditions”
-Install then close when finished 
+1. File explorer > downloads > search for “VC_redist.x86.exe”
+2. Double click the file > click next > click “I agree to license terms and conditions”
+3. Install then close when finished 
 
 ### Installing and setting up MYSQL Server 
-File explorer > downloads > search for “mysql-5.5.62-win32.msi”
-Double click on it > click next > check box agreeing with the license and terms 
-Choose typical setup type > select install > check box with “Launch the MySQL Instance Configuration Wizard” 
-My SQL Server Instance Configuration Wizard will display  
-Check “Standard configuration” circle > click next > check “Install as Windows Service Box” > click next 
-Check the box that says ‘Modify Security Settings” 
-Username is “root”
-Set password > retype it > click next > click execute > let it install > click finish 
+1. File explorer > downloads > search for “mysql-5.5.62-win32.msi”
+2. Double click on it > click next > check box agreeing with the license and terms 
+3. Choose typical setup type > select install > check box with “Launch the MySQL Instance Configuration Wizard” 
+- My SQL Server Instance Configuration Wizard will display  
+4. Check “Standard configuration” circle > click next > check “Install as Windows Service Box” > click next 
+5. Check the box that says ‘Modify Security Settings” 
+- Username is “root”
+6. Set password > retype it > click next > click execute > let it install > click finish 
 
 ### Registering PHP from within IIS 
-Go to start > search “Internet Information Services” > right click and run as administrator
-Open PHP manager > click Register new PHP version 
-A window will appear and find the ellipses(...) > click it > go to This PC > Windows (C:) > PHP folder > find “php-cgi” > open > click ok 
+1. Go to start > search “Internet Information Services” > right click and run as administrator
+2. Open PHP manager > click Register new PHP version 
+3. A window will appear and find the ellipses(...) > click it > go to This PC > Windows (C:) > PHP folder > find “php-cgi” > open > click ok 
 
-On IIS, find the connection tab on the left hand side, click the top of the list that has the name of your virtual machine 
-You will be at the page you started at 
-On the right hand of the page, under actions and manage server, click restart 
+4. On IIS, find the connection tab on the left hand side, click the top of the list that has the name of your virtual machine 
+- You will be at the page you started at 
+5. On the right hand of the page, under actions and manage server, click restart 
 
 ### Installing osTicket 
-Run two instances of file explorer 
-On the first instance > downloads > find “osTicket v1.15.8” > double click
-This file is zipped up, you will notice 2 folders, one called “scripts” and one called “upload”
-On the second instance > This PC > Windows(C:) > inetpub > wwwroot > open the folder
-With both instances of file explorer open, go back to the first instance, left click drag and drop the upload folder into the wwwroot folder
-Right click and rename the upload folder exactly “osTicket” 
+- Run two instances of file explorer 
+1. On the first instance > downloads > find “osTicket v1.15.8” > double click
+- This file is zipped up, you will notice 2 folders, one called “scripts” and one called “upload”
+2. On the second instance > This PC > Windows(C:) > inetpub > wwwroot > open the folder
+3. With both instances of file explorer open, go back to the first instance, left click drag and drop the upload folder into the wwwroot folder
+4. Right click and rename the upload folder exactly “osTicket” 
 
-Go back to IIS and restart the server 
-Within IIS, go to the left hand side that says “connections”, find the folder that says “sites” 
-Click the arrow, click on another arrow that says “Default Web Site” then open the osTicket folder
-On the folder, go the right hand side and find “Browse *:80”
-A page will appear thanking you for installing osTicket which means you have done all the steps correctly
-You will notice at the bottom of the page that some extensions are not enabled
+5. Go back to IIS and restart the server 
+6. Within IIS, go to the left hand side that says “connections”, find the folder that says “sites” 
+7. Click the arrow, click on another arrow that says “Default Web Site” then open the osTicket folder
+8. On the folder, go the right hand side and find “Browse *:80”
+- A page will appear thanking you for installing osTicket which means you have done all the steps correctly
+- You will notice at the bottom of the page that some extensions are not enabled
+9. Go back to IIS, go back to the osTicket page 
+10. From there, go to PHP manager click on enable or disable extensions
+- Enable: php_imap.dll
+- Enable: php_intl.dll
+- Enable: php_opache.dll
 
-Go back to IIS, go back to the osTicket page 
-From there, go to PHP manager click on enable or disable extensions
-Enable: php_imap.dll
-Enable: php_intl.dll
-Enable: php_opache.dll
+- When you go back to the web browser where you have osTicket open, you will notice the changes 
 
--  When you go back to the web browser where you have osTicket open, you will notice the changes 
+11. Go to file explorer > This PC > Windows(C:) > inetpub > wwwroot > osTicket > include 
+12. Once there, find “ost-sampleconfig.php” then rename it “ost-config.php” 
 
-Go to file explorer > This PC > Windows(C:) > inetpub > wwwroot > osTicket > include 
-Once there, find “ost-sampleconfig.php” then rename it “ost-config.php” 
+13. Right click the same file > properties > security > advanced > disable inheritance > remove all inherited permissions from this object > go to add > select principal 
 
-Right click the same file > properties > security > advanced > disable inheritance > remove all inherited permissions from this object > go to add > select principal 
-
-In the textbox, enter “everyone”, check names, then click ok 
-Under basic permissions, check full control box and click ok 
-Click apply and ok until done  
+14. In the textbox, enter “everyone”, check names, then click ok 
+15. Under basic permissions, check full control box and click ok 
+16. Click apply and ok until done  
   
-Go back to your web browser that has the osTicket page click continue, fill out system settings section and admin user section,
-It's important to write down your login information somewhere so you don’t forget when you go to log on 
+17. Go back to your web browser that has the osTicket page click continue, fill out system settings section and admin user section,
+- It's important to write down your login information somewhere so you don’t forget when you go to log on 
 
 ### Installing HeidiSQL 
-File explorer > downloads > find “Heidisql” > open 
-Accept the agreement, keep clicking next and install 
-Check the box that says “Launch HeidiSQL” then click finish 
-When it is opened, go the bottom left side and click new 
-You will need to type in your credentials from MYSQL Server, your username is root 
-Click open > right click unnamed > create new > database 
+1. File explorer > downloads > find “Heidisql” > open 
+2. Accept the agreement, keep clicking next and install 
+3. Check the box that says “Launch HeidiSQL” then click finish 
+4. When it is opened, go the bottom left side and click new 
+- You will need to type in your credentials from MYSQL Server, your username is root 
+5. Click open > right click unnamed > create new > database 
+6. Name it “osTicket” then click ok 
 
-Name it “osTicket” then click ok 
-
-Go back to the osTicket page in the browser and fill out the database settings
-Your MYSQL Database will be “osTicket” 
-Your MYSQL Username will be “root”
-Fill in your password 
-Click install now 
+7. Go back to the osTicket page in the browser and fill out the database settings
+- Your MYSQL Database will be “osTicket” 
+- Your MYSQL Username will be “root”
+- Fill in your password 
+8. Click install now 
 
 ### Cleaning up 
-File explorer > This PC > Windows > (C:) > inetpub > wwwroot > osTicket 
-Right click setup folder and delete 
-Go to include > ost-config.php > properties > right click security > advanced > click everyone > edit 
-Uncheck everybox except “read & execute” and “read” 
-
-Click ok > apply > ok > ok 
+1. File explorer > This PC > Windows > (C:) > inetpub > wwwroot > osTicket 
+2. Right click setup folder and delete 
+3. Go to include > ost-config.php > properties > right click security > advanced > click everyone > edit 
+4. Uncheck everybox except “read & execute” and “read” 
+5. Click ok > apply > ok > ok 
 
 Logging into osTicket 
-Go to your web browser and paste this link 
+1. Go to your web browser and paste this link 
 2. Then log into your credentials and you will be logged into osTicket! 
