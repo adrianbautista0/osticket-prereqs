@@ -3,7 +3,8 @@
 </p>
 
 <h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+This project is a detailed walkthrough and tutorial that guides users through the process of setting up a customer support ticketing system called osTicket on a Windows-based virtual machine within Microsoft Azure. It covers a range of tasks, from configuring the Azure environment to installing and configuring various technologies such as Internet Information Technology Services (IIS), PHP, mySQL, and osTicket itself. Environments used were Microsoft Azure for hosting the virtual machine and a web browser for accessing and configuring osTicket. Services used in this tutorial are Information Web Services for web hosting. Applications used were PHP for server-side scripting, MySQL for database management, osTicket itself, for managing support requests and tickets. 
+<br />
 
 
 
