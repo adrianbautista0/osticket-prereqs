@@ -6,7 +6,7 @@
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
 
-<h2>Video Demonstration</h2>
+
 
 
 
@@ -15,18 +15,21 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Internet Information Services (IIS)
-- 
+- osTicket
+- MYSQL Server
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 10</b> (22H2)
 
 <h2>List of Prerequisites</h2>
 
 - Internet Information Services with CGI and Common HTTP features
 - PHP Manager for IIS
 - Rewrite Module
-- 
-- Item 5
+- PHP
+- C++ Redistributable
+- MYSQL Server
+- HeidiSQL
 
 <h2>Installation Steps</h2>
 
