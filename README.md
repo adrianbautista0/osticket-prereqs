@@ -70,12 +70,12 @@ This project is a detailed walkthrough and tutorial that guides users through th
 ![image](https://github.com/adrianbautista0/osticket-prereqs/assets/142345957/c28130ef-1c02-4c5f-a7d3-bf472b6f798f)
 
 ### Installing PHP manager for IIS  
-Go to file explorer and within downloads, search for “PHPManagerForIIS_V1.5.0.msi”
-Double click on it and install it
+1. Go to file explorer and within downloads, search for “PHPManagerForIIS_V1.5.0.msi”
+2. Double click on it and install it
 
 ### Installing Rewrite Module 
-In the downloads folder of file explorer, search for “rewrite_amd64_en-US.msi”
-Double click on it, a pop up will appear, accept the license agreement and install it
+1. In the downloads folder of file explorer, search for “rewrite_amd64_en-US.msi”
+2. Double click on it, a pop up will appear, accept the license agreement and install it
 
 ### Creating the directory C:\PHP and installing PHP
 1. In file explorer > find This PC > Windows (C:) > right click > New > folder > Name “PHP” 
