@@ -30,7 +30,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-Setting up resources in Azure 
+### Setting up resources in Azure 
 On your computer, head over to portal.azure.com and sign in 
 Create a resource group 
 
@@ -41,7 +41,7 @@ Create a virtual machine
 - Minimum of 2 virtual CPU’s and 16GB of Memory 
 - Write down the login credentials
 
-Downloading the installation files  
+### Downloading the installation files  
 Go to the Azure Portal, find the public IP address of the virtual machine you just created and copy it 
 Go to start, type in “Remote Desktop Connection” 
 If on Mac, download Microsoft Remote Desktop app from the app store 
@@ -58,25 +58,25 @@ A page for Internet Information Services should pop up if all the previous steps
 
 
 
-Installing PHP manager for IIS  
+### Installing PHP manager for IIS  
 Go to file explorer and within downloads, search for “PHPManagerForIIS_V1.5.0.msi”
 Double click on it and install it
 
-Installing Rewrite Module 
+### Installing Rewrite Module 
 In the downloads folder of file explorer, search for “rewrite_amd64_en-US.msi”
 Double click on it, a pop up will appear, accept the license agreement and install it
 
-Creating the directory C:\PHP and installing PHP
+### Creating the directory C:\PHP and installing PHP
 In file explorer > find This PC > Windows (C:) > right click > New > folder > Name “PHP” 
 In file explorer > go to downloads > find “php-7.3.8-nts-Win32-VC15-x86.zip”
 Right click on it > extract all > click browse > This PC > Windows (C:) > Select PHP > Extract
 
-Installing C++ Redistributable
+### Installing C++ Redistributable
 File explorer > downloads > search for “VC_redist.x86.exe”
 Double click the file > click next > click “I agree to license terms and conditions”
 Install then close when finished 
 
-Installing and setting up MYSQL Server 
+### Installing and setting up MYSQL Server 
 File explorer > downloads > search for “mysql-5.5.62-win32.msi”
 Double click on it > click next > check box agreeing with the license and terms 
 Choose typical setup type > select install > check box with “Launch the MySQL Instance Configuration Wizard” 
@@ -86,7 +86,7 @@ Check the box that says ‘Modify Security Settings”
 Username is “root”
 Set password > retype it > click next > click execute > let it install > click finish 
 
-Registering PHP from within IIS 
+### Registering PHP from within IIS 
 Go to start > search “Internet Information Services” > right click and run as administrator
 Open PHP manager > click Register new PHP version 
 A window will appear and find the ellipses(...) > click it > go to This PC > Windows (C:) > PHP folder > find “php-cgi” > open > click ok 
@@ -95,7 +95,7 @@ On IIS, find the connection tab on the left hand side, click the top of the list
 You will be at the page you started at 
 On the right hand of the page, under actions and manage server, click restart 
 
-Installing osTicket 
+### Installing osTicket 
 Run two instances of file explorer 
 On the first instance > downloads > find “osTicket v1.15.8” > double click
 This file is zipped up, you will notice 2 folders, one called “scripts” and one called “upload”
@@ -130,7 +130,7 @@ Click apply and ok until done
 Go back to your web browser that has the osTicket page click continue, fill out system settings section and admin user section,
 It's important to write down your login information somewhere so you don’t forget when you go to log on 
 
-Installing HeidiSQL 
+### Installing HeidiSQL 
 File explorer > downloads > find “Heidisql” > open 
 Accept the agreement, keep clicking next and install 
 Check the box that says “Launch HeidiSQL” then click finish 
@@ -146,7 +146,7 @@ Your MYSQL Username will be “root”
 Fill in your password 
 Click install now 
 
-Cleaning up 
+### Cleaning up 
 File explorer > This PC > Windows > (C:) > inetpub > wwwroot > osTicket 
 Right click setup folder and delete 
 Go to include > ost-config.php > properties > right click security > advanced > click everyone > edit 
